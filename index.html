@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Manache Shlok - Telugu Version</title>
+  <title>Manache Shlok - Hindi Version</title>
 
   <script type="text/javascript">
     /* 1. SECURITY CONTROLS */
@@ -23,10 +23,6 @@
     function cleanUrl() {
         if (window.location.pathname.endsWith("index.html")) {
             let newPath = window.location.pathname.replace("index.html", "");
-            // Ensure root path stays valid
-            if (newPath === "" || newPath.endsWith("/")) {
-                newPath = window.location.pathname.split('index.html')[0];
-            }
             let newUrl = newPath + window.location.search;
             window.history.replaceState(null, "", newUrl);
         }
@@ -34,9 +30,8 @@
   </script>
 
   <style>
-    /* ===== Global Reset & Protection ===== */
+    /* Global & Protection Styles */
     * { box-sizing: border-box; }
-
     body {
         font-family: Arial, sans-serif;
         background-color: #F4F7F6;
@@ -52,9 +47,9 @@
 
     img { pointer-events: none; -webkit-user-drag: none; }
 
-    /* ===== Top Orange Navigation ===== */
+    /* Layout Styles - BLUE THEME */
     .top-header-nav {
-      background-color: #FF6600; 
+      background-color: #0D47A1;
       padding: 12px 0;
       overflow-x: auto;
       white-space: nowrap;
@@ -67,7 +62,7 @@
 
     .nav-links-container a {
       text-decoration: none;
-      color: #FF6600;
+      color: #0D47A1;
       background-color: white;
       font-weight: bold;
       font-size: 14px;
@@ -75,7 +70,6 @@
       border-radius: 5px;
     }
 
-    /* ===== Channel Name Section ===== */
     .site-title-box {
       background-color: #FFFDE7;
       padding: 30px 10px;
@@ -83,14 +77,8 @@
       border-bottom: 4px solid #FFD600;
     }
 
-    .site-title-box h1 {
-      color: #FF6600; 
-      margin: 0;
-      font-size: 24px;
-      line-height: 1.3;
-    }
+    .site-title-box h1 { color: #FF6600; margin: 0; font-size: 24px; line-height: 1.3; }
 
-    /* ===== Page Navigation Section ===== */
     .page-nav-section {
       display: flex;
       flex-direction: column;
@@ -101,12 +89,11 @@
     }
 
     .book-name-badge {
-      background-color: #FF6600;
+      background-color: #0D47A1;
       color: white;
-      padding: 10px 25px;
-      border-radius: 30px;
+      padding: 12px 25px;
+      border-radius: 25px;
       font-weight: bold;
-      font-size: 16px;
     }
 
     .scroll-controls {
@@ -114,10 +101,11 @@
       align-items: center;
       justify-content: center;
       width: 100%;
+      margin-top: 10px;
     }
 
     .scroll-btn {
-      background-color: #FF6600;
+      background-color: #0D47A1;
       color: white;
       border: none;
       border-radius: 4px;
@@ -138,16 +126,15 @@
 
     .numbers-wrapper a {
       text-decoration: none;
-      color: #FF6600;
+      color: #0D47A1;
       font-weight: bold;
-      border: 1px solid #FF6600;
+      border: 1px solid #0D47A1;
       padding: 7px 15px;
       border-radius: 4px;
     }
 
-    .numbers-wrapper a.active { background-color: #FF6600; color: white; }
+    .numbers-wrapper a.active { background-color: #0D47A1; color: white; }
 
-    /* ===== Main Content Card ===== */
     .main-content-card {
       max-width: 90%;
       width: 850px;
@@ -166,8 +153,9 @@
       margin-top: -55px;
       margin-bottom: 25px;
     }
+
     .round-badge {
-      background-color: #FF6600;
+      background-color: #0D47A1;
       color: white;
       width: 55px;
       height: 55px;
@@ -179,22 +167,11 @@
       border: 4px solid #F4F7F6;
     }
 
-    .page-text-content { 
-      font-size: 20px; 
-      text-align: center;
-      color: #5C2E00; 
-    }
-
-    .page-text-content h2, 
-    .page-text-content h3 {
-      color: #FF6600; 
-      font-size: 26px;
-      margin: 20px 0;
-      font-weight: bold;
-    }
+    .page-text-content { font-size: 20px; text-align: center; }
+    .page-text-content h2, .page-text-content h3 { color: #C2185B; font-size: 26px; margin: 20px 0; font-weight: bold; }
 
     .coming-soon-container {
-      background-color: #FF6600;
+      background-color: #0D47A1;
       color: white;
       padding: 40px 15px;
       border-radius: 12px;
@@ -203,7 +180,7 @@
 
     .bottom-nav { display: flex; justify-content: space-between; padding: 20px 0; }
     .nav-btn {
-      background-color: #FF6600;
+      background-color: #0D47A1;
       color: white;
       text-decoration: none;
       padding: 12px 25px;
@@ -211,14 +188,7 @@
       font-weight: bold;
     }
 
-    /* ===== Footer ===== */
-    .footer {
-      background-color: #0D1B3D;
-      color: white;
-      text-align: center;
-      padding: 30px;
-      margin-top: 50px;
-    }
+    .footer { background-color: #0D1B3D; color: white; text-align: center; padding: 30px; margin-top: 50px; }
   </style>
 </head>
 
@@ -226,11 +196,10 @@
 
 <nav class="top-header-nav">
   <div class="nav-links-container">
-    <a href="https://csrgnk.github.io/manache-shlok/">Home</a>
-    <a href="https://csrgnk.github.io/manache-shlok/hindi/">Hindi Version</a>
-    <a href="https://csrgnk.github.io/Omnnbc/">Main Site</a>
-    <a href="https://csrgnk.github.io/Dasabodha/">Dasabodha</a>
-    <a href="https://csrgnk.github.io/Upasana-Chandrika/">Upasana Chandrika</a>
+    <a href="https://csrgnk.github.io/manache-shlok/" target="_blank">Manache Shlok Telugu</a>
+    <a href="https://csrgnk.github.io/Omnnbc/" target="_blank">Main Site</a>
+    <a href="https://csrgnk.github.io/Dasabodha/" target="_blank">Dasabodha</a>
+    <a href="https://csrgnk.github.io/Upasana-Chandrika/" target="_blank">Upasana Chandrika</a>
   </div>
 </nav>
 
@@ -239,7 +208,7 @@
 </div>
 
 <div class="page-nav-section">
-  <div class="book-name-badge">Manache Shlok (Telugu)</div>
+  <div class="book-name-badge">Manache Shlok (Hindi)</div>
   <div class="scroll-controls">
     <button class="scroll-btn" onclick="sideScroll(-150)">&#10094;</button>
     <div class="numbers-wrapper" id="pagination"></div>
@@ -278,14 +247,14 @@ function loadPage(p) {
     .catch(() => {
       contentDiv.innerHTML = `
         <div class="coming-soon-container">
-          <h2 style="color:white">Coming Soon</h2>
-          <p>Telugu content is being prepared.</p>
+          <h2>Coming Soon</h2>
+          <p>Hindi content is being prepared.</p>
         </div>`;
       updateButtons();
     });
 }
 
-// Generate Clean Links
+// Generate Clean Pagination Links
 for (let i = 1; i <= totalPages; i++) {
   const a = document.createElement("a");
   a.href = "?page=" + i;
